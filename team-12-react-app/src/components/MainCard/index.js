@@ -14,3 +14,15 @@ Plan
 Code
  - add prop of ClassName to allow for styling
 */
+
+import React from "react";
+
+function MainCard() {
+  return (
+    <div className="mainCard--container">
+      <h3>MainCard here</h3>
+    </div>
+  );
+}
+
+export default MainCard;

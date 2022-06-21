@@ -20,33 +20,33 @@
 
 - Create components
 
-- Navbar component
+  - Navbar component ✅
 
-  - logo and burger menu
+    - logo and burger menu ❌
 
-- Week1bar component
+  - Week1bar component ✅
 
-  - <h2>{display current week}</h2>
+    - <h2>{display current week}</h2> ❌
 
-  - Main Card component
+  - Main Card component ✅
 
-  - Topic text Component e.g. HTML, CSS
+  - Topic text Component e.g. HTML, CSS ✅
 
-  - Resources components
+  - Resources components ✅
 
-    - resources 1 (props with hard coded links for now)
-    - resources 2 (props with hard coded links for now)
+    - resources 1 (props with hard coded links for now) ❌
+    - resources 2 (props with hard coded links for now) ❌
 
-  - Stars component ???
+  - Stars component ??? ✅
 
-    - (populate with 5 star imgs for now)
+    - (populate with 5 star imgs for now) ❌
 
-  - Input component
+  - Input component ✅
 
-    - Input field (type text)
-    - +AddToList Button component inline with input field
+    - Input field (type text) ❌
+    - +AddToList Button component inline with input field ❌
 
-  - List component
+  - List component ✅
     - ul
-      - li's generated onClick of +AddToList Button
-      - Edit, Delete & CheckBox buttons inline with li-text
+      - li's generated onClick of +AddToList Button ❌
+      - Edit, Delete & CheckBox buttons inline with li-text ❌

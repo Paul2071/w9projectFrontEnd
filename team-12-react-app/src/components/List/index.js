@@ -8,7 +8,7 @@ Plan
 
 /*
 Code
- - Text value of Input  |   EditButton    |   DeleteButton   |    CheckboxButton
+ - Text value of Input  |   DeleteButton   |    CheckboxButton
     - Text value comes in from Input as props
 
   Edit Button: 
@@ -19,4 +19,10 @@ Code
 
   Checkbox Button
     - a boolean value to express isTicked ? "yes" : "no"
+
+
+
+
+    ***** 
+        -  EditButton considered but deleted from App functionality for now. Will be added   if requirements change.
 */

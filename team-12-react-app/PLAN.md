@@ -25,7 +25,7 @@
 
   - Navbar component ✅
 
-    - logo and burger menu ❌
+    - logo and burger menu ✅
 
   - Week1bar component ✅
 

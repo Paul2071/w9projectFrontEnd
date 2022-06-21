@@ -29,7 +29,7 @@
 
   - Week1bar component ✅
 
-    - <h2>{display current week}</h2> ❌
+    - <h2>{display current week}</h2> ✅
 
   - Main Card component ✅
 

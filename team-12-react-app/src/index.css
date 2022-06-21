@@ -27,3 +27,8 @@ code {
 .logo--container {
   cursor: pointer;
 }
+
+.weekbar--container {
+  background-color: #adb5bd;
+  text-align: center;
+}

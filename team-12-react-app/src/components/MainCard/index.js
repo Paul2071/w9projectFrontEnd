@@ -9,3 +9,8 @@ Plan
     - List
     - Stars
 */
+
+/*
+Code
+ - add prop of ClassName to allow for styling
+*/

@@ -5,3 +5,18 @@ Plan
 
   <li> value will be received from Input component via props data
 */
+
+/*
+Code
+ - Text value of Input  |   EditButton    |   DeleteButton   |    CheckboxButton
+    - Text value comes in from Input as props
+
+  Edit Button: 
+    - onClick event that triggers function: PUT request updating content 
+
+  Delete Button: 
+    - onClick event that triggers function: DELETE request updating content 
+
+  Checkbox Button
+    - a boolean value to express isTicked ? "yes" : "no"
+*/

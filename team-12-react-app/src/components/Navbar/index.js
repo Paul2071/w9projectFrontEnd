@@ -5,3 +5,11 @@ Plan
     - svg / png icon
   
 */
+
+/*
+Code
+  - Add className's for styling /  positioning
+  - refer to images folder for icons / images
+
+  
+*/

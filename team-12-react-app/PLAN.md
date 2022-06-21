@@ -14,7 +14,10 @@
 - move App into components folder ✅
 
 - check routes (should be ok - but still check) ✅
+
   - check css imports ect are linked correctly as folder structure has changed ✅
+
+- create images folder at component level inside src
 
 ### Inside Components folder
 

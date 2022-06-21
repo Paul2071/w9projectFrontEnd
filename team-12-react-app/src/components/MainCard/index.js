@@ -16,11 +16,15 @@ Code
 */
 
 import React from "react";
+import Input from "../Input";
+
 
 function MainCard() {
   return (
-    <div className="mainCard--container">
+    <div className="maincard--container">
       <h3>MainCard here</h3>
+     <Input ></Input>
+  
     </div>
   );
 }

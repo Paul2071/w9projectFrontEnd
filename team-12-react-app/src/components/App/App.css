@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+.strike {
+  text-decoration: line-through
+}
+.nonstrike {
+  text-decoration: null
+}
+
 /* .App {
   text-align: center;
 }

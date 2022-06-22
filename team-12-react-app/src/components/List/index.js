@@ -41,14 +41,15 @@ function ListItem({tasks}){
   const [toggleClass, setToggleClass] = useState(false);
 
   // event.target.style.textDecoration
+  //className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle}
 
-  function handleToggle (event) {
-  if (tasks.is_complete === false) {
-    event.target.style.removeProperty('text-decoration');
-  } else {
-    event.target.style.setProperty('text-decoration', 'line-through');
-  }
-}
+//   function handleToggle (event, {tasks}) {
+//   if (tasks.is_complete === false) {
+//     event.target.style.removeProperty('text-decoration');
+//   } else {
+//     event.target.style.setProperty('text-decoration', 'line-through');
+//   }
+// }
 
 //function to change boolean value of is_completed column in DB
 function updateStatus(id) {
@@ -82,7 +83,7 @@ function updateStatus(id) {
       {tasks.map(function (item) {
         
         return (
-          <li className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle} key={item.task_id}>
+          <li key={item.task_id}>
             {item.task}
             <button
               onClick={() => {

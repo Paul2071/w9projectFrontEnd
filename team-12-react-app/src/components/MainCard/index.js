@@ -20,6 +20,7 @@ import Input from "../Input";
 import ListItem from "../List";
 import Topic from "../TopicText";
 import Resources from "../Resources";
+import Stars from "../Stars";
 
 /*
 run front and back end servers
@@ -34,6 +35,7 @@ function MainCard({ tasks }) {
     <div className="maincard--container">
       <Topic />
       <Resources />
+      <Stars />
       <Input />
       <ListItem tasks={tasks}></ListItem>
     </div>

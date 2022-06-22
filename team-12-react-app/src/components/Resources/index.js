@@ -14,10 +14,15 @@ import React from "react";
 function Resources() {
   return (
     <div className="resources">
-      <a href="https://www.freecodecamp.org/news/html-full-course-for-beginners/">
+      <a
+        href="https://www.freecodecamp.org/news/html-full-course-for-beginners/"
+        target="_blank"
+      >
         HTML: Full Course
       </a>
-      <a href="https://www.w3schools.com/html/">HTML: Documentation </a>
+      <a href="https://www.w3schools.com/html/" target="_blank">
+        HTML: Documentation{" "}
+      </a>
     </div>
   );
 }

@@ -32,7 +32,8 @@ import "../App/App.css"
 
 
 
-function Input() {
+function Input({tasks}) {
+  console.log(tasks)
   //toggleClass state is to toggle CSS class and is used with our checkbox and its 
   //onclick event. Not 100% working as it toggles ALL of the list.
   const [toggleClass, setToggleClass] = useState(false);

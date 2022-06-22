@@ -25,20 +25,16 @@ write fetch request to get all route on server
 use useEffect to call fetch function when page loads
 */
 
-async function fetchAPI() {
-  const response = await fetch("http://localhost:3005/computational_thinking");
-  const data = await response.json();
-  console.log(data.payload.rows);
-}
 
 
 
-function MainCard() {
+
+function MainCard({tasks}) {
+  console.log(tasks)
   return (
     <div className="maincard--container">
       <h3>MainCard here</h3>
-     <Input ></Input>
-     <button onClick={() => {fetchAPI()}}>Click</button>
+     <Input tasks={tasks}></Input>
       
     </div>
   );

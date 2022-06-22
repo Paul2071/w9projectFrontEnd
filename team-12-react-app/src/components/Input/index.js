@@ -57,15 +57,16 @@ function Input() {
 
    //a function that fires when "add to list" button clicked.
    function handleClick() {
-     // sets the index state to +1 of what it was ensuring unique key id 
-     //  this technqiue only works for the localhost session
-     setIndex(index + 1);
-     //new variable made up of the properties id and toDoItem with they 
-     //key value pairs of the state "index" and "text"
-    const newItem = { id: index, toDoItem: text };
-    //immutably change the initial state of [] to [{ id: index, toDoItem: text }]
-    // setToDoList([...toDoList, newItem]);
-     }
+    console.log(text)
+    async function postAPI() {
+      await fetch("http://localhost:3005/computational_thinking",
+      {method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({task: text})
+    })
+    }
+    postAPI();
+  }
 
 
      //a function that fires when checkbox or list item is clicked

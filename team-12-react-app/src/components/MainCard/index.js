@@ -17,6 +17,7 @@ Code
 
 import React from "react";
 import Input from "../Input";
+import ListItem from "../List";
 
 /*
 run front and back end servers
@@ -34,7 +35,8 @@ function MainCard({tasks}) {
   return (
     <div className="maincard--container">
       <h3>MainCard here</h3>
-     <Input tasks={tasks}></Input>
+     <Input/>
+     <ListItem tasks={tasks}></ListItem>
       
     </div>
   );

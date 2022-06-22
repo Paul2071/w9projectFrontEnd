@@ -32,17 +32,15 @@ import "../App/App.css"
 
 
 
-function Input({tasks}) {
-  console.log(tasks)
-  //toggleClass state is to toggle CSS class and is used with our checkbox and its 
-  //onclick event. Not 100% working as it toggles ALL of the list.
-  const [toggleClass, setToggleClass] = useState(false);
+function Input() {
+
+
   //toDOlist state is the string to be rendered within a <p> tag that is being added to the list.
   // Initial state is an empty array.
   // Using spread in the handleClick function we immutable the initial state
   //it and add in the variable of newItem which has two properties that 
   // we change via dot notation when we map across this array at point of render
-  const [toDoList, setToDoList] = useState([]);
+
   //text state is the string the user types into the input field
   //we use the text state to set the propery of toDoItem
   const [text, setText] = useState("");
@@ -66,29 +64,14 @@ function Input({tasks}) {
      //key value pairs of the state "index" and "text"
     const newItem = { id: index, toDoItem: text };
     //immutably change the initial state of [] to [{ id: index, toDoItem: text }]
-    setToDoList([...toDoList, newItem]);
+    // setToDoList([...toDoList, newItem]);
      }
 
 
      //a function that fires when checkbox or list item is clicked
-  function handleToggle (event) {
-    //toggles css class of the list item - not 100% as it toggles
-    //for all of the items. Commented out as not best use, may be useful later.
-   // toggleClass ? setToggleClass(false) : setToggleClass(true)
-    
-    //changes the styling of the item clicked in this case, toggling strikethrough
-    if (event.target.style.textDecoration) {
-      event.target.style.removeProperty('text-decoration');
-    } else {
-      event.target.style.setProperty('text-decoration', 'line-through');
-    }
-  
-  }
 
-  //function that fires when delete button clicked
-  function deleteClick(idValue) {
-    setToDoList(toDoList.filter((item) => item.id !== idValue));
-  }
+
+
 
   return (
     <div className="input--container">
@@ -99,27 +82,6 @@ function Input({tasks}) {
         className="input--field"
       ></input>
       <button onClick={handleClick}>Add to list</button>
-      <ul id="list--container">
-      {/* this maps over the current state of toDoList which should be an object inside an array
-      like this [{ id: index, toDoItem: text }]. Each thing we map over we call an "item" and use dot 
-      notation to access the properties of item with item.id and item.toDoItem */}
-        {tasks.map(function (item) {
-          return (
-            <li className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle} key={item.task_id}>
-              {item.task}
-              <button
-                onClick={() => {
-                  deleteClick(item.id);
-                }}
-                className="delete--button"
-                >
-                Remove
-              </button>
-              <input type="checkbox" onClick={handleToggle}></input>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 }

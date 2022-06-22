@@ -40,29 +40,40 @@ function ListItem({tasks}){
 
   const [toggleClass, setToggleClass] = useState(false);
 
+  // event.target.style.textDecoration
+
   function handleToggle (event) {
-    //toggleClass state is to toggle CSS class and is used with our checkbox and its 
-  //onclick event. Not 100% working as it toggles ALL of the list.
-
-
-
-  //toggles css class of the list item - not 100% as it toggles
-  //for all of the items. Commented out as not best use, may be useful later.
- // toggleClass ? setToggleClass(false) : setToggleClass(true)
-  
-  //changes the styling of the item clicked in this case, toggling strikethrough
-  if (event.target.style.textDecoration) {
+  if (tasks.is_complete === false) {
     event.target.style.removeProperty('text-decoration');
   } else {
     event.target.style.setProperty('text-decoration', 'line-through');
   }
+}
 
+//function to change boolean value of is_completed column in DB
+function updateStatus(id) {
+  async function updateAPI() {
+    await fetch("http://localhost:3005/computational_thinking",
+    {method: "PATCH",
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({task_id: id})
+  })
+  }
+  updateAPI();
 }
 
   //function that fires when delete button clicked
-  function deleteClick(idValue) {
-    setToDoList(toDoList.filter((item) => item.id !== idValue));
+  function deleteClick(id) {
+    async function deleteAPI() {
+      await fetch("http://localhost:3005/computational_thinking",
+      {method: "DELETE",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({task_id: id})
+    })
+    }
+    deleteAPI();
   }
+
   return (
     <ul id="list--container">
     {/* this maps over the current state of toDoList which should be an object inside an array
@@ -75,13 +86,13 @@ function ListItem({tasks}){
             {item.task}
             <button
               onClick={() => {
-                deleteClick(item.id);
+                deleteClick(item.task_id);
               }}
               className="delete--button"
               >
               Remove
             </button>
-            <input type="checkbox" onClick={handleToggle}/>
+            <input type="checkbox" onClick={() => {updateStatus(item.task_id)}}/>
           </li>
         );
       })}

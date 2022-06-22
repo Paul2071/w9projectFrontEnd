@@ -103,10 +103,10 @@ function Input({tasks}) {
       {/* this maps over the current state of toDoList which should be an object inside an array
       like this [{ id: index, toDoItem: text }]. Each thing we map over we call an "item" and use dot 
       notation to access the properties of item with item.id and item.toDoItem */}
-        {toDoList.map(function (item) {
+        {tasks.map(function (item) {
           return (
-            <li className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle} key={item.id}>
-              {item.toDoItem}
+            <li className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle} key={item.task_id}>
+              {item.task}
               <button
                 onClick={() => {
                   deleteClick(item.id);

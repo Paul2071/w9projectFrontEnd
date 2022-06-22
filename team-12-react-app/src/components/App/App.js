@@ -11,7 +11,7 @@ function App() {
     async function fetchAPI() {
       const response = await fetch("http://localhost:3005/computational_thinking");
       const data = await response.json();
-      setTasks(data.payload.rows[0].task)
+      setTasks(data.payload.rows)
     }
     fetchAPI();
     }, [])

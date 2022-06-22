@@ -99,9 +99,12 @@ function Input() {
       ></input>
       <button onClick={handleClick}>Add to list</button>
       <ul id="list--container">
+      {/* this maps over the current state of toDoList which should be an object inside an array
+      like this [{ id: index, toDoItem: text }]. Each thing we map over we call an "item" and use dot 
+      notation to access the properties of item with item.id and item.toDoItem */}
         {toDoList.map(function (item) {
           return (
-            <p className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle} key={item.id}>
+            <li className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle} key={item.id}>
               {item.toDoItem}
               <button
                 onClick={() => {
@@ -112,7 +115,7 @@ function Input() {
                 Remove
               </button>
               <input type="checkbox" onClick={handleToggle}></input>
-            </p>
+            </li>
           );
         })}
       </ul>

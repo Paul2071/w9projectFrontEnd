@@ -9,12 +9,11 @@ Plan
 Code
 - hard code 5 star images for demonstrative purposes: hard code once direction decided 
 
-   ??? - 2 images representing a state filled / unfilled for each star
-    - unfilled is default state = false
-    - images are buttons
-      - onClick if false make true
-        - if true make false 
-        - if true then filled 
-        - if false then unfilled 
+- User logs into account
+- see 5 stars greyed out and prompt to "rate proficiency"
+- user clicks star to set proficiency level 
+- proficiency saved between sessions can be set by clicking any star - filling in stars before it
+
+
 
 */

@@ -18,6 +18,8 @@ Code
 import React from "react";
 import Input from "../Input";
 import ListItem from "../List";
+import Topic from "../TopicText";
+import Resources from "../Resources";
 
 /*
 run front and back end servers
@@ -26,18 +28,14 @@ write fetch request to get all route on server
 use useEffect to call fetch function when page loads
 */
 
-
-
-
-
-function MainCard({tasks}) {
-  console.log(tasks)
+function MainCard({ tasks }) {
+  console.log(tasks);
   return (
     <div className="maincard--container">
-      <h3>MainCard here</h3>
-     <Input/>
-     <ListItem tasks={tasks}></ListItem>
-      
+      <Topic />
+      <Resources />
+      <Input />
+      <ListItem tasks={tasks}></ListItem>
     </div>
   );
 }

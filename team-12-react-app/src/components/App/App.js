@@ -2,26 +2,28 @@ import "./App.css";
 import NavBar from "../Navbar";
 import WeekBar from "../WeekBar";
 import MainCard from "../MainCard";
-import React, {useEffect, useState} from "react";
-
+import React, { useEffect, useState } from "react";
+import Topic from "../TopicText";
 
 function App() {
   const [tasks, setTasks] = useState([]);
-  useEffect(()=> {
+  useEffect(() => {
     async function fetchAPI() {
-      const response = await fetch("http://localhost:3005/computational_thinking");
+      const response = await fetch(
+        "http://localhost:3005/computational_thinking"
+      );
       const data = await response.json();
-      setTasks(data.payload.rows)
+      setTasks(data.payload.rows);
     }
     console.log(tasks);
     fetchAPI();
-    }, [])
-    console.log(tasks);
+  }, []);
+  console.log(tasks);
   return (
     <div className="App">
       <NavBar />
       <WeekBar />
-      <MainCard tasks={tasks}/>   
+      <MainCard tasks={tasks} />
     </div>
   );
 }

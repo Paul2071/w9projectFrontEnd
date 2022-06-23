@@ -12,7 +12,7 @@ function App() {
     const data = await response.json();
 
     setTasks(data.payload.rows)
-    
+    console.log(data.payload.rows)
   }
   useEffect(() => {
     fetchAPI();

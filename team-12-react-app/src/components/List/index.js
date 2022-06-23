@@ -33,7 +33,7 @@ import "../App/App.css"
 function ListItem({tasks, fetchAPI, lesson}){
 
 
-function ListItem({ tasks, fetchAPI }) {
+
   // event.target.style.textDecoration
   //className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle}
 
@@ -54,15 +54,12 @@ function ListItem({ tasks, fetchAPI }) {
         body: JSON.stringify({ task_id: id })
       });
     }
-    fetchAPI();
     updateAPI();
+    fetchAPI();
     fetchAPI();
   }
 
-  updateAPI();
-  fetchAPI();
-  fetchAPI();
-}
+
 
 
   //function that fires when delete button clicked
@@ -74,8 +71,8 @@ function ListItem({ tasks, fetchAPI }) {
         body: JSON.stringify({ task_id: id })
       });
     }
-    deleteAPI();
     fetchAPI();
+    deleteAPI();
     fetchAPI();
   }
 
@@ -83,9 +80,9 @@ function ListItem({ tasks, fetchAPI }) {
     <ul id="list--container">
       {tasks.map(function (item) {
 
-        return  item.topic === lesson && (
+        return item.topic === lesson && (
           <li key={item.task_id} className="li-item">
-            <label class="container">
+            <label className="container">
               <input
                 className="checkbox"
                 type="checkbox"
@@ -93,7 +90,7 @@ function ListItem({ tasks, fetchAPI }) {
                   updateStatus(item.task_id);
                 }}
               />
-              <span class="checkmark"></span>
+              <span className="checkmark"></span>
             </label>
 
             <div className="li-input-text">{item.task}</div>

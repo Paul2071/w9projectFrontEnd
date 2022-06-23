@@ -30,13 +30,12 @@ use useEffect to call fetch function when page loads
 
 
 
-function MainCard({tasks}) {
-  console.log(tasks)
+function MainCard({tasks, fetchAPI}) {
   return (
     <div className="maincard--container">
       <h3>MainCard here</h3>
-     <Input/>
-     <ListItem tasks={tasks}></ListItem>
+     <Input fetchAPI={fetchAPI}/>
+     <ListItem tasks={tasks} fetchAPI={fetchAPI}></ListItem>
       
     </div>
   );

@@ -29,12 +29,11 @@ Code
 
 
 import React from "react";
-import { useState } from "react"
 import "../App/App.css"
 
 
 
-function ListItem({tasks}){
+function ListItem({tasks, fetchAPI}){
 
   // event.target.style.textDecoration
   //className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle}
@@ -56,7 +55,9 @@ function updateStatus(id) {
     body: JSON.stringify({task_id: id})
   })
   }
+  fetchAPI();
   updateAPI();
+  fetchAPI();
 }
 
   //function that fires when delete button clicked
@@ -69,10 +70,9 @@ function updateStatus(id) {
       body: JSON.stringify({task_id: id})
     })
     }
-    async function renderAPI(){
-      await fetch()
-    }
+    fetchAPI();
     deleteAPI();
+    fetchAPI();
   }
 
   return (

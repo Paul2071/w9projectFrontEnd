@@ -55,8 +55,8 @@ function updateStatus(id) {
     body: JSON.stringify({task_id: id})
   })
   }
-  fetchAPI();
   updateAPI();
+  fetchAPI();
   fetchAPI();
 }
 
@@ -70,9 +70,11 @@ function updateStatus(id) {
       body: JSON.stringify({task_id: id})
     })
     }
-    fetchAPI();
     deleteAPI();
     fetchAPI();
+    fetchAPI();
+    console.log("clicked")
+
   }
 
   return (

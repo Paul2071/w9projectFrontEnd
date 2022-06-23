@@ -12,7 +12,6 @@ function App() {
   async function fetchAPI() {
     const response = await fetch("http://localhost:3005/user_table");
     const data = await response.json();
-    console.log(data.payload.rows)
     setTasks(data.payload.rows)
   }
   useEffect(()=> {

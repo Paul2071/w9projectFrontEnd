@@ -13,10 +13,8 @@ function App() {
       const data = await response.json();
       setTasks(data.payload.rows)
     }
-    console.log(tasks);
     fetchAPI();
     }, [])
-    console.log(tasks);
   return (
     <div className="App">
       <NavBar />

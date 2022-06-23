@@ -36,10 +36,6 @@ import "../App/App.css"
 
 function ListItem({tasks}){
 
-  const [toDoList, setToDoList] = useState([]);
-
-  const [toggleClass, setToggleClass] = useState(false);
-
   // event.target.style.textDecoration
   //className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle}
 
@@ -65,6 +61,7 @@ function updateStatus(id) {
 
   //function that fires when delete button clicked
   function deleteClick(id) {
+    
     async function deleteAPI() {
       await fetch("http://localhost:3005/computational_thinking",
       {method: "DELETE",
@@ -72,16 +69,15 @@ function updateStatus(id) {
       body: JSON.stringify({task_id: id})
     })
     }
+    async function renderAPI(){
+      await fetch()
+    }
     deleteAPI();
   }
 
   return (
     <ul id="list--container">
-    {/* this maps over the current state of toDoList which should be an object inside an array
-    like this [{ id: index, toDoItem: text }]. Each thing we map over we call an "item" and use dot 
-    notation to access the properties of item with item.id and item.toDoItem */}
       {tasks.map(function (item) {
-        
         return (
           <li key={item.task_id}>
             {item.task}

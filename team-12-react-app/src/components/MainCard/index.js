@@ -37,7 +37,7 @@ function MainCard({ tasks, fetchAPI }) {
       <Resources />
       <Stars />
       <Input fetchAPI={fetchAPI} />
-      <ListItem tasks={tasks} fetchAPI={fetchAPI}</ListItem>
+      <ListItem tasks={tasks} fetchAPI={fetchAPI}></ListItem>
 
     </div>
   );

@@ -29,17 +29,18 @@ write fetch request to get all route on server
 use useEffect to call fetch function when page loads
 */
 
-function MainCard({ tasks, fetchAPI }) {
-  console.log(tasks);
+function MainCard({ tasks, fetchAPI, lesson, href }) {
   return (
+
     <div className="mainCard-wrapper">
       <div className="maincard--container">
-        <Topic />
-        <Resources />
+        <Topic lesson={lesson} />
+        <Resources href={href} />
         <Stars />
-        <Input fetchAPI={fetchAPI} />
-        <ListItem tasks={tasks} fetchAPI={fetchAPI}></ListItem>
+        <Input fetchAPI={fetchAPI} lesson={lesson} />
+      <ListItem tasks={tasks} fetchAPI={fetchAPI} lesson={lesson}></ListItem>
       </div>
+
     </div>
   );
 }

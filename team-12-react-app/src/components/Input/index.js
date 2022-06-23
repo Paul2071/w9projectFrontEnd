@@ -32,7 +32,7 @@ import "../App/App.css";
 
 
 
-function Input({fetchAPI}) {
+function Input({fetchAPI, lesson}) {
 
   const [text, setText] = useState("");
 
@@ -48,9 +48,8 @@ function Input({fetchAPI}) {
       await fetch("http://localhost:3005/user_table",
       {method: "POST",
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({task: text})
+      body: JSON.stringify({task: text, topic : lesson})
     })
-
     }
     fetchAPI();
     postAPI();

@@ -3,7 +3,6 @@ import NavBar from "../Navbar";
 import WeekBar from "../WeekBar";
 import MainCard from "../MainCard";
 import React, { useEffect, useState } from "react";
-import Topic from "../TopicText";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -11,8 +10,9 @@ function App() {
   async function fetchAPI() {
     const response = await fetch("http://localhost:3005/user_table");
     const data = await response.json();
-    console.log(data.payload.rows);
-    setTasks(data.payload.rows);
+
+    setTasks(data.payload.rows)
+    
   }
   useEffect(() => {
     fetchAPI();
@@ -23,8 +23,12 @@ function App() {
       <NavBar />
       <WeekBar />
 
-      <MainCard tasks={tasks} topic={tasks.topic} fetchAPI={fetchAPI} />
-      <MainCard tasks={tasks} fetchAPI={fetchAPI} />
+
+      <MainCard tasks={tasks} lesson="HTML" fetchAPI={fetchAPI} href={"https://www.freecodecamp.org/news/html-full-course-for-beginners/"}/>
+      <MainCard tasks={tasks} lesson="Javascript" fetchAPI={fetchAPI} href={"https://developer.mozilla.org/en-US/docs/Web/JavaScript"}/>
+      <MainCard tasks={tasks} lesson="CSS" fetchAPI={fetchAPI} href={"https://www.youtube.com/watch?v=ouncVBiye_M&ab_channel=Fireship"}/>
+
+
     </div>
   );
 }

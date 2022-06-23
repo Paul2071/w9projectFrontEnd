@@ -28,7 +28,10 @@ Code
 */
 
 import React from "react";
-import "../App/App.css";
+
+import "../App/App.css"
+function ListItem({tasks, fetchAPI, lesson}){
+
 
 function ListItem({ tasks, fetchAPI }) {
   // event.target.style.textDecoration
@@ -56,6 +59,12 @@ function ListItem({ tasks, fetchAPI }) {
     fetchAPI();
   }
 
+  updateAPI();
+  fetchAPI();
+  fetchAPI();
+}
+
+
   //function that fires when delete button clicked
   function deleteClick(id) {
     async function deleteAPI() {
@@ -65,15 +74,16 @@ function ListItem({ tasks, fetchAPI }) {
         body: JSON.stringify({ task_id: id })
       });
     }
-    fetchAPI();
     deleteAPI();
+    fetchAPI();
     fetchAPI();
   }
 
   return (
     <ul id="list--container">
       {tasks.map(function (item) {
-        return (
+
+        return  item.topic === lesson && (
           <li key={item.task_id} className="li-item">
             <label class="container">
               <input
@@ -94,6 +104,7 @@ function ListItem({ tasks, fetchAPI }) {
                   deleteClick(item.task_id);
                 }}
                 className="delete--button"
+
               >
                 X
               </button>

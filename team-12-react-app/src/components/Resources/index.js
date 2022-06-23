@@ -11,14 +11,14 @@ Code
 
 import React from "react";
 
-function Resources() {
+function Resources({href}) {
   return (
     <div className="resources">
       <a
-        href="https://www.freecodecamp.org/news/html-full-course-for-beginners/"
+        href={href}
         target="_blank"
       >
-        www.freecodecamp.org
+        View Resources
       </a>
     </div>
   );

@@ -33,7 +33,7 @@ import "../App/App.css"
 
 
 
-function ListItem({tasks, fetchAPI}){
+function ListItem({tasks, fetchAPI, lesson}){
 
   // event.target.style.textDecoration
   //className={toggleClass ? "strike" : "nonstrike"} onClick={handleToggle}
@@ -73,14 +73,12 @@ function updateStatus(id) {
     deleteAPI();
     fetchAPI();
     fetchAPI();
-    console.log("clicked")
-
   }
 
   return (
     <ul id="list--container">
       {tasks.map(function (item) {
-        return (
+        return item.topic === lesson && (
           <li key={item.task_id}>
             {item.task}
             <button

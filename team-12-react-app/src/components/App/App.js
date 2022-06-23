@@ -8,6 +8,7 @@ import Topic from "../TopicText";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  // const [html, setHtml] = useState();
 
   async function fetchAPI() {
     const response = await fetch("http://localhost:3005/user_table");
@@ -23,8 +24,8 @@ function App() {
       <NavBar />
       <WeekBar />
 
-      <MainCard tasks={tasks} topic={tasks.topic} fetchAPI={fetchAPI}/>
-      <MainCard tasks={tasks} fetchAPI={fetchAPI}/>     
+      <MainCard tasks={tasks} lesson="HTML" fetchAPI={fetchAPI}/>
+      <MainCard tasks={tasks} lesson="Javascript" fetchAPI={fetchAPI}/>     
 
     </div>
   );

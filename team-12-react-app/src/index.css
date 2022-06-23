@@ -69,13 +69,23 @@ code {
 
 /* MAINCARD */
 
+.mainCard-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  /* background-color: rebeccapurple; */
+  width: 100%;
+  padding: 20px;
+}
+
 .maincard--container {
   background-color: var(--soc-brand-color);
   /* height: 220px; */
-  margin: 16px;
+  margin: 16px auto;
   padding: 16px;
   border-radius: 4px;
-  max-width: 320px;
+  width: 100%;
+  max-width: 520px;
   text-align: center;
 }
 

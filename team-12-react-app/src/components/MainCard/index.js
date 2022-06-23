@@ -32,13 +32,14 @@ use useEffect to call fetch function when page loads
 function MainCard({ tasks, fetchAPI }) {
   console.log(tasks);
   return (
-    <div className="maincard--container">
-      <Topic />
-      <Resources />
-      <Stars />
-      <Input fetchAPI={fetchAPI} />
-      <ListItem tasks={tasks} fetchAPI={fetchAPI}</ListItem>
-
+    <div className="mainCard-wrapper">
+      <div className="maincard--container">
+        <Topic />
+        <Resources />
+        <Stars />
+        <Input fetchAPI={fetchAPI} />
+        <ListItem tasks={tasks} fetchAPI={fetchAPI}></ListItem>
+      </div>
     </div>
   );
 }

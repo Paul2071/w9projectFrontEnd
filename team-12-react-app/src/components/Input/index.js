@@ -22,11 +22,11 @@ Code
 */
 
 import React from "react";
-import { useState } from "react"
-import "../App/App.css"
+import { useState } from "react";
+import "../App/App.css";
 
-//the basic logic is that we create an object with the properties of 
-// id and toDoItem. Using index and text states, we change the properties 
+//the basic logic is that we create an object with the properties of
+// id and toDoItem. Using index and text states, we change the properties
 //of the item to our userinput (text state) and add an index+1 .
 //Then map over the object rendering a <p> tag with the info we have mapped over.
 
@@ -39,7 +39,8 @@ function Input({fetchAPI}) {
   //a function that captures the user input in the input field
   function handleChange(e) {
     setText(e.target.value);
-     }
+  }
+
 
    //a function that fires when "add to list" button clicked.
    function handleClick() {
@@ -49,6 +50,7 @@ function Input({fetchAPI}) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({task: text})
     })
+
     }
     fetchAPI();
     postAPI();
@@ -57,16 +59,19 @@ function Input({fetchAPI}) {
 
 
 
-
   return (
     <div className="input--container">
       <input
-        type="text"        
+        type="text"
         onChange={handleChange}
         placeholder="Click list item to complete"
         className="input--field"
       ></input>
-      <button onClick={handleClick}>Add to list</button>
+      <div className="button--container">
+        <button onClick={handleClick} className="add-button">
+          +
+        </button>
+      </div>
     </div>
   );
 }

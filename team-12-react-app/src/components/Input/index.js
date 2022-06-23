@@ -44,7 +44,7 @@ function Input({fetchAPI}) {
    //a function that fires when "add to list" button clicked.
    function handleClick() {
     async function postAPI() {
-      await fetch("http://localhost:3005/computational_thinking",
+      await fetch("http://localhost:3005/user_table",
       {method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({task: text})

@@ -49,7 +49,7 @@ function ListItem({tasks, fetchAPI}){
 //function to change boolean value of is_completed column in DB
 function updateStatus(id) {
   async function updateAPI() {
-    await fetch("http://localhost:3005/computational_thinking",
+    await fetch("http://localhost:3005/user_table",
     {method: "PATCH",
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({task_id: id})
@@ -64,7 +64,7 @@ function updateStatus(id) {
   function deleteClick(id) {
     
     async function deleteAPI() {
-      await fetch("http://localhost:3005/computational_thinking",
+      await fetch("http://localhost:3005/user_table",
       {method: "DELETE",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({task_id: id})

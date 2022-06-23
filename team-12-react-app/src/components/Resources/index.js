@@ -18,10 +18,7 @@ function Resources() {
         href="https://www.freecodecamp.org/news/html-full-course-for-beginners/"
         target="_blank"
       >
-        HTML: Full Course
-      </a>
-      <a href="https://www.w3schools.com/html/" target="_blank">
-        HTML: Documentation{" "}
+        www.freecodecamp.org
       </a>
     </div>
   );

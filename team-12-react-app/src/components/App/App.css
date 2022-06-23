@@ -1,13 +1,18 @@
-* {
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .strike {
-  text-decoration: line-through
+  text-decoration: line-through;
 }
 .nonstrike {
-  text-decoration: null
+  text-decoration: null;
 }
 
 /* .App {

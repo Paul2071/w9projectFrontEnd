@@ -37,7 +37,11 @@ function Stars() {
 
   return (
     <div className="stars">
-      <Rating onClick={handleRating} ratingValue={rating} /* Rating Props */ />
+      <Rating
+        onClick={handleRating}
+        ratingValue={rating}
+        className="single-stars" /* Rating Props */
+      />
     </div>
   );
 }

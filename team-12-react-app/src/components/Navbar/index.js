@@ -22,8 +22,9 @@ function NavBar() {
   return (
     <div className="navbar">
       <div className="logo--container" alt="logo">
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" className="logo" />
       </div>
+      <p className="logoType">SoC Proficiency Tracker</p>
       <div className="burgerMenu">
         <img src={hamburger} alt="hamburger menu" />
       </div>

@@ -12,11 +12,12 @@ function App() {
     const data = await response.json();
 
     setTasks(data.payload.rows)
-    console.log(data.payload.rows)
   }
-  useEffect(() => {
-    fetchAPI();
+  console.log(tasks)
+ useEffect(() => {
+   fetchAPI();
   }, []);
+  
 
   return (
     <div className="App">

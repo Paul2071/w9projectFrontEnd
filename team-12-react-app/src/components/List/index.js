@@ -54,8 +54,8 @@ function ListItem({tasks, fetchAPI, lesson}){
         body: JSON.stringify({ task_id: id })
       });
     }
-    updateAPI();
     fetchAPI();
+    updateAPI();
     fetchAPI();
   }
 

@@ -5,25 +5,28 @@ import MainCard from "../MainCard";
 import React, { useEffect, useState } from "react";
 import Topic from "../TopicText";
 
+
 function App() {
   const [tasks, setTasks] = useState([]);
-  useEffect(() => {
-    async function fetchAPI() {
-      const response = await fetch(
-        "http://localhost:3005/computational_thinking"
-      );
-      const data = await response.json();
-      setTasks(data.payload.rows);
-    }
-    console.log(tasks);
+
+  async function fetchAPI() {
+    const response = await fetch("http://localhost:3005/user_table");
+    const data = await response.json();
+    console.log(data.payload.rows)
+    setTasks(data.payload.rows)
+  }
+  useEffect(()=> {
     fetchAPI();
-  }, []);
-  console.log(tasks);
+    }, [])
+
   return (
     <div className="App">
       <NavBar />
       <WeekBar />
-      <MainCard tasks={tasks} />
+
+      <MainCard tasks={tasks} topic={tasks.topic} fetchAPI={fetchAPI}/>
+      <MainCard tasks={tasks} fetchAPI={fetchAPI}/>     
+
     </div>
   );
 }

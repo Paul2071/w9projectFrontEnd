@@ -16,8 +16,7 @@ Part of our continued development would be to add a landing page, linking the st
 
 ### Project Screen Shot(s)
 
-
-![Empty database page render] 
+![Empty database page render](https://github.com/SchoolOfCode/w9_frontend-project-room-12_halil-jack-paul-stephen_fe/blob/main/team-12-react-app/Screenshot2.png?raw=true) ![Empty database page render](https://github.com/SchoolOfCode/w9_frontend-project-room-12_halil-jack-paul-stephen_fe/blob/main/team-12-react-app/Screenshot1.png?raw=true)
 
 ## Installation and Setup Instructions
 

@@ -1,22 +1,12 @@
-/*
-Plan
-  This component will return a h2 with a prop 
-  We will hard code the props into it
-*/
-
-/*
-Code
-  - url prop will be handed in from App.js
-*/
-
 import React from "react";
 
-function Resources({href}) {
+function Resources({linkToResource}) {
   return (
     <div className="resources">
       <a
-        href={href}
+        href={linkToResource}
         target="_blank"
+        rel="noreferrer"
       >
         View Resources
       </a>

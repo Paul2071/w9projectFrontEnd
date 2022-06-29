@@ -1,22 +1,103 @@
-# National Bootcamp - Week Nine Project Brief
+## School of Code Proficiency Tracker
 
-For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!
 
-To do this, you’ll need to take the time to understand your user (a bootcamper), their experiences, and their problems. Specifically, it might be good to focus on how to enhance the remote experience of a bootcamper, or what can help them with the vast amount of learning there is to do as a new developer. What do they need? What problem might they have that your application could solve for them? How can you get into the mindset of your user and keep them at the centre of your problem-solving?
 
-The high level outcomes from this project should be:
 
-- A minimum viable product (MVP) showcasing an innovative full stack application which meets the user need you’ve identified
-- A presentation, complete with how you worked as a team and a demonstration of the project
+The brief we were given revolved around improving the learning experience of fellow School of Code bootcampers.
 
-Your project application might include the following:
+The problem we identified was that of keeping track of the vast amount of learning required by a new developer.
 
-- Include a user experience created in React
-- Build a REST API which is used by your front-end
-- Be supported by a Postgresql database with multiple tables
-- Be built and managed in an agile way
-- Utilise testing for ensuring robust code
+## Project Status
 
-Remember, you only have a few days to code a solution, so being agile is key. That means brainstorming what you want to build, and working in sprints to deliver value each time. After each sprint, you can reassess and either continue on course or iterate towards a better solution. Have a plan which is incremental steps, rather than all or nothing.
 
-Click the link to see the [Project Guidelines](https://github.com/SchoolOfCode/project-guidelines/blob/master/project-week.md)
+This project is currently in development. 
+Users can add tasks to the main display of the app which then updates the database. 
+Part of our continued development would be to add a landing page, linking the star rating with the database and further refinements. 
+
+### Project Screen Shot(s)
+
+![Empty database page render](https://github.com/SchoolOfCode/w9_frontend-project-room-12_halil-jack-paul-stephen_fe/blob/main/team-12-react-app/Screenshot2.png?raw=true) ![Empty database page render](https://github.com/SchoolOfCode/w9_frontend-project-room-12_halil-jack-paul-stephen_fe/blob/main/team-12-react-app/Screenshot1.png?raw=true)
+
+## Installation and Setup Instructions
+
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+
+Backend Installation:
+
+Go to: 
+
+`../w9_backend-project-team_12`
+
+To Install Dependecies:  
+
+`npm install`  
+
+To Run Test Suite:  
+
+`npm test`  
+
+To Create Table:
+
+`npm run db:createTable`
+
+To Start Server:
+
+`npm start`  
+
+ Now the backend is up and running and ready to be interacted with. Time to install the Frontend.
+
+ Frontend Installation:
+
+ Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+
+Go To:
+
+`../team-12-react-app`
+
+ To Install Dependecies:  
+
+`npm install` 
+
+To Run Test Suite:  
+
+`npm test` 
+
+To Start Server:
+
+`npm start`  
+
+## Reflection
+
+  - What was the context for this project? (ie: was this a side project? was this for Turing? was this for an experiment?)
+  This was a week long project between School of Code bootcampers with varying degrees of coding experience. We were given a brief on Monday, with a presentation for Senior Developers delivered on Friday.
+  - What did you set out to build?
+  We set out to build a fullstack application solving the problems outlined above. Our high level goals were to build a REST API that interacted with our React Frontend via CRUD operations. We built this using the Ahile methodology and incorporating the full UX/UI process.
+  - Why was this project challenging and therefore a really good learning experience?
+  One of the main challenges we faced was settling on the final features of our MVP and the core functionality addressing the statement problem. The deadline provided was particularly difficult to meet.
+  - What tools did you use to implement this project?
+  These are the tools that we used:
+  React, React Create Stars Library, React Testing Library VSCode, Express, Cors, PostgreSQL, Nodejs, Heroku DB, Jest, Postman, Trello, Figma, GoogleDocs, HTML, JavaScript and CSS.
+
+  We chose to use tools that we had been shown on the bootcamp to further our understanding of them and cut down on the time needed to learn new tools. 
+
+
+Links to Documentation:
+
+<https://reactjs.org/docs/getting-started.html>
+
+<https://expressjs.com/>
+
+<https://node-postgres.com/>
+
+<https://devcenter.heroku.com/categories/reference>
+
+<https://www.postgresql.org/docs/>
+
+<https://www.npmjs.com/package/dotenv>
+
+
+
+
+  
+    
+

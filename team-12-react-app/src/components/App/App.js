@@ -18,6 +18,7 @@ function App() {
   useEffect(() => {
     fetchAPI();
   }, []);
+  
 
   return (
     <div className="App">

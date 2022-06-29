@@ -1,4 +1,4 @@
-import "./App.css";
+
 import NavBar from "../Navbar";
 import WeekBar from "../WeekBar";
 import MainCard from "../MainCard";

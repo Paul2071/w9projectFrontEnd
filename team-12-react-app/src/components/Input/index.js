@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "../App/App.css";
+
 
 //tied input field and addToList button/function together due their linked functionality
 function Input({fetchAPI, topic}) {

@@ -1,5 +1,5 @@
 import "./App.css";
-import NavBar from "../NavBar";
+import NavBar from "../Navbar";
 import WeekBar from "../WeekBar";
 import MainCard from "../MainCard";
 import React, { useEffect, useState } from "react";

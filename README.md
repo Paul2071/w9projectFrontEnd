@@ -68,13 +68,13 @@ To Start Server:
 
 ## Reflection
 
-  - What was the context for this project? (ie: was this a side project? was this for Turing? was this for an experiment?)
+  
   This was a week long project between School of Code bootcampers with varying degrees of coding experience. We were given a brief on Monday, with a presentation for Senior Developers delivered on Friday.
-  - What did you set out to build?
+  
   We set out to build a fullstack application solving the problems outlined above. Our high level goals were to build a REST API that interacted with our React Frontend via CRUD operations. We built this using the Ahile methodology and incorporating the full UX/UI process.
-  - Why was this project challenging and therefore a really good learning experience?
+ 
   One of the main challenges we faced was settling on the final features of our MVP and the core functionality addressing the statement problem. The deadline provided was particularly difficult to meet.
-  - What tools did you use to implement this project?
+  
   These are the tools that we used:
   React, React Create Stars Library, React Testing Library VSCode, Express, Cors, PostgreSQL, Nodejs, Heroku DB, Jest, Postman, Trello, Figma, GoogleDocs, HTML, JavaScript and CSS.
 

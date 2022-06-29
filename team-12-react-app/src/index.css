@@ -4,6 +4,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
 }
@@ -20,10 +22,7 @@
 }
 
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: var(--font-family);
+   font-family: var(--font-family);
 }
 
 /* NAVBAR */
@@ -173,10 +172,6 @@ li {
   margin-right: 16px;
   position: absolute;
   right: 0;
-}
-
-.checkbox {
-  background-color: red;
 }
 
 .container {

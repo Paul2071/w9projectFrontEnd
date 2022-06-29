@@ -2,6 +2,7 @@ import React from "react";
 import hamburger from "../../images/hamburger.png";
 import logo from "../../images/logo.png";
 
+  
 
 function NavBar() {
   return (

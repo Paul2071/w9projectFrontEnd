@@ -11,8 +11,8 @@ Code
 
 import React from "react";
 
-function Topic({lesson}) {
-  return <h3 className="topic">{lesson}</h3>;
+function TopicHeader({topic}) {
+  return <h3 className="topic">{topic}</h3>;
 }
 
-export default Topic;
+export default TopicHeader;

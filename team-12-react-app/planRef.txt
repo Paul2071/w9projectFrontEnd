@@ -1,0 +1,141 @@
+From input file
+/*
+Plan
+  This component contains the following components / 
+  This is the main card the user will interact with: 
+
+    - TopicText
+    - Resources
+    - Input
+    - List
+    - Stars
+*/
+
+/*
+Code
+ - add prop of ClassName to allow for styling
+*/
+/*
+run front and back end servers
+import useState + useEffect from React
+write fetch request to get all route on server
+use useEffect to call fetch function when page loads
+*/
+
+From resources file/*
+Plan
+  This component will return a h2 with a prop 
+  We will hard code the props into it
+*/
+
+/*
+Code
+  - url prop will be handed in from App.js
+*/
+
+From Stars file/*
+Plan
+  This component will render 5 stars as images / icons
+  The functionality to set an amount of stars will be coded once main App functionality works
+    - The stars when coded will go from unfilled to filled onClick and backend functionality will follow
+*/
+
+/*
+Code
+- hard code 5 star images for demonstrative purposes: hard code once direction decided 
+
+- User logs into account
+- see 5 stars greyed out and prompt to "rate proficiency"
+- user clicks star to set proficiency level 
+- proficiency saved between sessions can be set by clicking any star - filling in stars before it
+
+- backend will have star value starting at 0
+when user loads the page GET request to dislay stars based on current star value
+  (starting at zero or based on the number they left it at prior)
+- when user clicks a star a post request will be sent to back-end with star value
+- immediately sends a GET request to display number of stars based on value given 
+
+
+*/
+
+From Input file 
+/*
+Plan
+  This component should take text entry from a user through an <input> tag
+  This component will also feature a  + button
+    - when + button is clicked populate list with <li> tag containing user input value
+*/
+
+/*
+Code
+ - It needs a state
+ - State will be made up of users input value
+  - const [state, setState] = useState("");
+
+  - Input requires a handleChange listener
+    - State will be updated on each character typed
+    
+  Button:
+    - requires an onClick even listener
+      - will envoke a function that renders List Component with the state of the Input
+      - send POST request to backend table with the same content 
+
+*/
+
+From ListItem file
+/*
+Plan
+  This component renders an <li> with user input 
+  The component will feature an edit button, a delete button and a checkbox button
+
+  <li> value will be received from Input component via props data
+*/
+
+/*
+Code
+ - Text value of Input  |   DeleteButton   |    CheckboxButton
+    - Text value comes in from Input as props
+
+  Edit Button: 
+    - onClick event that triggers function: PUT request updating content 
+
+  Delete Button: 
+    - onClick event that triggers function: DELETE request updating content 
+
+  Checkbox Button
+    - a boolean value to express isTicked ? "yes" : "no"
+
+
+
+
+    ***** 
+        -  EditButton considered but deleted from App functionality for now. Will be added   if requirements change.
+*/
+
+From NavBar file
+/*
+Plan
+  This component is made up of a logo and burger menu
+    - logo svg / png icon
+    - svg / png icon
+  
+*/
+
+/*
+Code
+  - Add className's for styling /  positioning
+  - refer to images folder for icons / images
+
+  
+*/
+
+From WeekBar file/*
+Plan
+  This component renders a <h2> of the week the user is viewing e.g. Week1
+*/
+
+/*
+Code
+  <h3> tag dependant on styling requirements
+  Hard code for now (functionality will scale to be dynamic: e.g. week 1, week 2)
+*/

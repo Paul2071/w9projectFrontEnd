@@ -11,6 +11,6 @@ test("renders resources link and checks if it navigates to external page when cl
     
     userEvent.click(link)
     
-    screen.debug()
+    
 
 });

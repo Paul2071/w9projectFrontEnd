@@ -22,23 +22,20 @@ function DisplayTask({tasks, fetchAPI, topic}){
   }
 
 
-  function deleteTaskFromDatabase(id) {
 
-    async function deleteAPI() {
+
+    async function deleteAPI(id) {
       const response = await fetch("http://localhost:3005/user_table", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ task_id: id })
       });
       const data = await response.json()
-      console.log(data.payload.command)
+      .then (fetchAPI())
+      .then (console.log(data.payload.command))
     }
 
-    //fetchAPI called around deleteAPI to counter deleteAPI function only updating database and not updating state when called
-    fetchAPI();
-    deleteAPI();
-    fetchAPI();
-  }
+  
 
   return (
     <ul id="list--container">
@@ -58,7 +55,7 @@ function DisplayTask({tasks, fetchAPI, topic}){
 
             <div>
               <button
-                onClick={() => {deleteTaskFromDatabase(item.task_id);}}
+                onClick={() => {deleteAPI(item.task_id);}}
                 className="delete--button">X</button>
             </div>
           </li>

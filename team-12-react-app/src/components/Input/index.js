@@ -10,7 +10,7 @@ function Input({fetchAPI, topic}) {
     setText(e.target.value);
   }
 
-   function addToList() {
+   
     
     async function postAPI() {
       const response = await fetch("http://localhost:3005/user_table",
@@ -19,14 +19,11 @@ function Input({fetchAPI, topic}) {
       body: JSON.stringify({task: text, topic : topic})
     })
     const data = await response.json()
-    console.log(data.payload.command)
+    .then (fetchAPI())
+    .then (console.log(data.payload.command))
     }
 
-    //fetchAPI called around postAPI to counter postAPI function only updating database and not updating state when called
-    fetchAPI();
-    postAPI();
-    fetchAPI();
-  }
+     
 
   return (
     <div className="input--container">
@@ -37,7 +34,7 @@ function Input({fetchAPI, topic}) {
         className="input--field"
       ></input>
       <div className="button--container">
-        <button onClick={addToList} className="add-button">
+        <button onClick={postAPI} className="add-button">
           +
         </button>
       </div>

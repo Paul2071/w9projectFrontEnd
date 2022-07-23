@@ -32,7 +32,7 @@ function DisplayTask({tasks, fetchAPI, topic}){
       });
       const data = await response.json()
       .then (fetchAPI())
-      .then (console.log(data.payload.command))
+       console.log(data.payload.command)
     }
 
   
